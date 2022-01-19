@@ -1,21 +1,16 @@
 class Budget
- 	attr_reader :year, :departments
+  attr_reader :year, :departments, :employees
 
- 	def initialize(year)
- 		@year = year
+  def initialize(year)
+    @year = year
     @departments = []
- 	end
+  end
 
   def add_departments(department)
     @departments << department
   end
 
-  def departments
-
+  def list_employees_by_salary
+    @employees.map { |employee| employee.salary }
   end
-
-  # def list_employees_by_salary
-  #   @employee.map |em|
-  # end
-
 end
